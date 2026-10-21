@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#faf096 ;
+}
+
+/* Header */
+header {
+    background-color: orangered;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffc400;
+}
+
+/* Hero Section */
+.hero {
+    margin: 30px auto;
+    width: 88%;
+    min-height: 350px;
+    background: linear-gradient(120deg, #122f30, #31514c);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Button */
+.btn {
+    background-color: #ffc400;
+    color: #342313;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+}
+.about {
+    width: 88%;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Image Area */
+.about-image {
+    flex: 1;
+    min-height: 250px;
+    background: linear-gradient(135deg, #263d36, #b17c4e);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+}
+
+.about-image span {
+    font-size: 100px;
+}
+
+/* Text Area */
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    color: #571b1a;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-content h3 {
+    color: #702927;
+    margin-bottom: 12px;
+}
+
+.about-content p {
+    color: #776664;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* About Button */
+.about-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+
+    background-color: #ffc400;
+    color: #342313;
+
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.about-btn:hover {
+    background-color: #e6b000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+    .about {
+        flex-direction: column;
+        width: 92%;
+        padding: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        min-height: 180px;
+    }
+
+    .about-content h2 {
+        font-size: 26px;
+    }
+}
+
+/* Popular Dishes Section */
+.menu {
+    width: 88%;
+    margin: 40px auto;
+}
+
+.menu h2 {
+    text-align: center;
+    color: #571b1a;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.dishes {
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dish {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eadbd4;
+    box-shadow: 0 4px 12px #321a1510;
+    transition: transform 0.3s;
+}
+
+.dish:hover {
+    
+    color:aqua;
+}
+
+.dish-image {
+    height: 160px;
+    background: linear-gradient(135deg, #f6d7bd, #e9b58f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+}
+
+.dish-content {
+    padding: 18px;
+}
+
+.dish-content h3 {
+    color: #571b1a;
+    margin-bottom: 10px;
+}
+
+.dish-content p {
+    color: #776664;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.dish-content h4 {
+    color: #b12825;
+    font-size: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+    .dishes {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        width: 92%;
+    }
+}
+
+/* Contact Section */
+.visit {
+    text-align: center;
+}
+
+.visit p {
+    line-height: 1.9;
+    color: #776664;
+    margin-bottom: 25px;
+}
+
+.visit strong {
+    color: #571b1a;
+}
+
+/* Footer Section */
+footer {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    margin-top: 30px;
+}
+
+footer h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #f0d9d4;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+
+</style>
+  <body>
+    <header>
+            <h2>Food court</h2>
+    
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+    
+        
+        <section class="hero" id="home">
+            <h1>Delicious Food,<br>Happy Moments</h1>
+            <p>Enjoy fresh and delicious food prepared with love.</p>
+            <a href="#menu" class="btn">View Menu</a>
+        </section>
+        <section class="about" id="about">
+
+    <div class="about-image">
+        <span>🍴</span>
+    </div>
+
+    <div class="about-content">
+        <h2>About Us</h2>
+
+        <h3>Welcome to Food Court</h3>
+
+        <p>
+            Food Court is a friendly restaurant that serves
+            delicious meals made with fresh ingredients.
+        </p>
+
+        <p>
+            Our goal is to provide tasty food and a comfortable
+            dining experience for everyone.
+        </p>
+
+        <a href="#menu" class="about-btn">Explore Our Menu</a>
+    </div>
+
+</section>
+<section class="menu" id="menu">
+
+    <h2>Popular Dishes</h2>
+
+    <div class="dishes">
+
+        <div class="dish">
+            <div class="dish-image">🍕</div>
+            <div class="dish-content">
+                <h3>Cheese Pizza</h3>
+                <p>Freshly baked pizza with delicious toppings.</p>
+                <h4>₹250</h4>
+            </div>
+        </div>
+
+        <div class="dish">
+            <div class="dish-image">🍔</div>
+            <div class="dish-content">
+                <h3>Classic Burger</h3>
+                <p>Crispy vegetables and a juicy patty.</p>
+                <h4>₹180</h4>
+            </div>
+        </div>
+
+        <div class="dish">
+            <div class="dish-image">🍝</div>
+            <div class="dish-content">
+                <h3>Creamy Pasta</h3>
+                <p>Creamy pasta prepared with delicious herbs.</p>
+                <h4>₹220</h4>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="why" id="why">
+    <h2 class="section-title">Why Choose Us?</h2>
+
+    <div class="features">
+        <article class="feature">
+            <div class="emoji">🍃</div>
+            <h3>Fresh Food</h3>
+            <p>We use fresh ingredients every day.</p>
+        </article>
+
+        <article class="feature">
+            <div class="emoji">⭐</div>
+            <h3>Quality</h3>
+            <p>Quality and taste are our priorities.</p>
+        </article>
+
+        <article class="feature">
+            <div class="emoji">⚡</div>
+            <h3>Fast Service</h3>
+            <p>We provide quick and friendly service.</p>
+        </article>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why" id="why">
+    <h2 class="section-title">Why Choose Us?</h2>
+
+    <div class="features">
+        <article class="feature">
+            <div class="emoji">🍃</div>
+            <h3>Fresh Food</h3>
+            <p>We use fresh ingredients every day.</p>
+        </article>
+
+        <article class="feature">
+            <div class="emoji">⭐</div>
+            <h3>Quality</h3>
+            <p>Quality and taste are our priorities.</p>
+        </article>
+
+        <article class="feature">
+            <div class="emoji">⚡</div>
+            <h3>Fast Service</h3>
+            <p>We provide quick and friendly service.</p>
+        </article>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="panel visit" id="contact">
+    <h2 class="section-title">Visit Us</h2>
+
+    <p>
+        📍 kanhgad, kasargod<br>
+        📞 +91 9446015648<br>
+        ✉️ naduus.gmail.com
+    </p>
+
+    <a class="btn" href="https://www.google.com/maps">
+        Find Us
+    </a>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <h2>Food Court</h2>
+    <p>Good Food · Good Mood</p>
+    <p>© 2026 Food Court. All Rights Reserved.</p>
+</footer>
+
+
+    
+  </body>
+</html>
